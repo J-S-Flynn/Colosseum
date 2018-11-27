@@ -65,10 +65,11 @@
             <version>5.1.6</version>
         </dependency>
 
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-        </dependency>
+        <!-- need this reading when the security is sorted -->
+        <!--<dependency>-->
+            <!--<groupId>redis.clients</groupId>-->
+            <!--<artifactId>jedis</artifactId>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>junit</groupId>
@@ -76,11 +77,11 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.twitter4j</groupId>
-            <artifactId>twitter4j-stream</artifactId>
-            <version>4.0.6</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.twitter4j</groupId>-->
+            <!--<artifactId>twitter4j-stream</artifactId>-->
+            <!--<version>4.0.6</version>-->
+        <!--</dependency>-->
 
     </dependencies>
 
