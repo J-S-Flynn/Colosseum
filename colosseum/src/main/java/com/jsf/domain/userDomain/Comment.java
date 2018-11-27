@@ -1,10 +1,15 @@
 package com.jsf.domain.userDomain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
+
+@Data
+@Entity
+@NoArgsConstructor
 public class Comment implements Serializable {
 
 
@@ -15,7 +20,7 @@ public class Comment implements Serializable {
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "post", referencedColumnName = "id")
-    private Post post;
+    private Post post ;
 
     private String comment ;
 

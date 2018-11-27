@@ -24,8 +24,8 @@ public class Post implements Serializable {
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "user", referencedColumnName = "id")
-    private User user ;
+    @JoinColumn(name = "user",  referencedColumnName = "id")
+    private User user;
 
     private String content ;
 
@@ -37,7 +37,7 @@ public class Post implements Serializable {
 
     @JsonIgnore
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
-    private List<Comment> comments  = new ArrayList<>() ;
+    private List<Comment> comments = new ArrayList<>() ;
 
     @Override
     public String toString(){
