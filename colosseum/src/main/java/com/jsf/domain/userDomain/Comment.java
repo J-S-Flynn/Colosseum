@@ -17,9 +17,11 @@ public class Comment implements Serializable {
     @JoinColumn(name = "post", referencedColumnName = "id")
     private Post post;
 
+    private String comment ;
+
     @Override
     public String toString(){
 
-        return String.format("Comments[id = '%d', post = '%s"], id, post );
+        return String.format("Comments[id = '%d', comment = '%s', postId = '%s']", id, comment) ;
     }
 }
