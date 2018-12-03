@@ -10,6 +10,6 @@ public class WebService {
 
     public String getHomepage(){
 
-        return "" ;
+        return "homePage" ;
     }
 }
