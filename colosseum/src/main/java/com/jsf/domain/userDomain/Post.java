@@ -2,7 +2,6 @@ package com.jsf.domain.userDomain;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.jsf.repositories.UserRepo;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
