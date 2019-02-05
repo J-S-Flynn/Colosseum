@@ -14,10 +14,19 @@ import java.util.List;
 @NoArgsConstructor
 public class User implements Serializable {
 
+    public User(User user) {
+        this.id = user.getId() ;
+        this.firstName = user.getFirstName();
+        this.lastName = user.getLastName();
+        this.userName = user.getUserName();
+        this.emailAddress = user.getEmailAddress();
+        this.password = user.getPassword();
+        this.posts = user.getPosts();
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id ;
+    private Long id ;
 
     private String firstName ;
 
@@ -27,6 +36,7 @@ public class User implements Serializable {
 
     private String emailAddress ;
 
+    //TODO Need hashing
     private String password ;
 
     @JsonIgnore
@@ -36,7 +46,7 @@ public class User implements Serializable {
     @Override
     public String toString(){
 
-        return String.format("User [Id = '%d', firstName = '%s', lastName = '%s', userName = '%s', emailAddress = '%s', password  = '%s']", Id, firstName, lastName, userName, emailAddress, password) ;
+        return String.format("User [Id = '%d', firstName = '%s', lastName = '%s', userName = '%s', emailAddress = '%s', password  = '%s']", id, firstName, lastName, userName, emailAddress, password) ;
     }
 
 
